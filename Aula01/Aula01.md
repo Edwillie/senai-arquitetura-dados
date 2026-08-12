@@ -1,0 +1,1 @@
+# Arquitetura de dados - 12/08/2026
