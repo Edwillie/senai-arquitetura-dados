@@ -1,0 +1,79 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMfWLRcOTf+RY1LOMI4AE7r",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Edwillie/senai-arquitetura-dados/blob/main/Aula01/Exercicio1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "83IHhLcLiiUz"
+      },
+      "outputs": [],
+      "source": [
+        "\n",
+        "produtos = [\n",
+        "    \"Cimento\", \"Tijolo\", \"Areia\", \"Brita\", \"Ferro\",\n",
+        "    \"Telha\", \"Argamassa\", \"Rejunte\", \"Cano PVC\", \"Fio Elétrico\"\n",
+        "]\n",
+        "\n",
+        "print(\"--- Demonstrando Pilha (Stack) ---\")\n",
+        "minha_pilha = []\n",
+        "\n",
+        "# a) Inserir os produtos na pilha\n",
+        "print(\"\\nInserindo produtos na pilha:\")\n",
+        "for produto in produtos:\n",
+        "    minha_pilha.append(produto)\n",
+        "    print(f\"Adicionado: {produto}. Pilha atual: {minha_pilha}\")\n",
+        "\n",
+        "# Remover os produtos da pilha\n",
+        "print(\"\\nRemovendo produtos da pilha (LIFO - Último a entrar, Primeiro a sair):\")\n",
+        "while minha_pilha:\n",
+        "    produto_removido = minha_pilha.pop()\n",
+        "    print(f\"Removido: {produto_removido}. Pilha atual: {minha_pilha}\")\n",
+        "\n",
+        "print(\"Pilha vazia.\")\n",
+        "\n",
+        "print(\"\\n--- Demonstrando Fila (Queue) (sem usar deque) ---\")\n",
+        "minha_fila = [] # Usando uma lista Python como fila\n",
+        "\n",
+        "# b) Inserir os produtos na fila\n",
+        "print(\"\\nInserindo produtos na fila:\")\n",
+        "for produto in produtos:\n",
+        "    minha_fila.append(produto)\n",
+        "    print(f\"Adicionado: {produto}. Fila atual: {minha_fila}\")\n",
+        "\n",
+        "# Remover os produtos da fila\n",
+        "print(\"\\nRemovendo produtos da fila (FIFO - Primeiro a entrar, Primeiro a sair):\")\n",
+        "while minha_fila:\n",
+        "    produto_removido = minha_fila.pop(0) # Remover do início da lista\n",
+        "    print(f\"Removido: {produto_removido}. Fila atual: {minha_fila}\")\n",
+        "\n",
+        "print(\"Fila vazia.\")"
+      ]
+    }
+  ]
+}
