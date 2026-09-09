@@ -13,3 +13,11 @@ Arquitetura de dados
 -- Temperatura
 
 - Desafio (Dor) > poucas ocorrencias de chuva
+
+# Formulas
+-- VP: Verdadeiro Positivo / FP: Falso Positivo
+-- VN: Verdadeiro Negativo / FN: Falso Negativo
+
+- precisão = VP / VP + FP
+- recall = VP / FN + VP
+- f1_score = recall x precisao x 2 / recall + precisao
