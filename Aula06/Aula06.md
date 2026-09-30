@@ -10,6 +10,10 @@ Criar a aplicação cliente.
 ELT --> Treino --> Cliente
 
 # ELT
+pipeline.py
+| Camadas | Tipos de dados |
+|---------|----------------|
+| Bronze  | Dados Brutos   |
 
 # Treino
 Random Forest
