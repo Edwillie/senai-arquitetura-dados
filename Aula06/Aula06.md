@@ -11,9 +11,13 @@ ELT --> Treino --> Cliente
 
 # ELT
 pipeline.py
-| Camadas | Tipos de dados |
-|---------|----------------|
-| Bronze  | Dados Brutos   |
+| Camadas | Tipos de dados   |
+|---------|------------------|
+| Bronze  | Dados Brutos     |
+| Prata   | > Idade          |
+|         | > Embarque       |
+| Ouro    | Colunas Úteis    |
+|         | Mapeamento Dados |
 
 # Treino
 Random Forest
