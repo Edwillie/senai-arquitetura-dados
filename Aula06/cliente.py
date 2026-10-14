@@ -34,3 +34,24 @@ with col2:
     irmaosConjuges = st.number_input("Irmãos e Conjuges abordo", min_value=0, max_value=18, value=0)
     paisFilhos =  st.number_input("Pais e Filhos abordo", min_value=0, max_value=18, value=0)
     tarifa = st.slider("Tarifa Paga", min_value=0.0, max_value=550.0, value=32.0)
+
+mapeamentoSexo = {"Feminino": 1, "Masculino": 0}    
+mapeamentoPorto = {"Southhampton":0, "Cherbourg":1, "Queenstown":2}
+
+entrada = pd.DataFrame(
+    [[classe, mapeamentoSexo[sexo], idade, irmaosConjuges, paisFilhos, tarifa, mapeamentoPorto[porto]]],
+    columns=colunas
+)
+
+st.divider()
+
+if st.button("Prever sobrevivencia", type="primary", use_container_width=True):
+    probabilidade = modelo.predict_proba(entrada)[0][1]
+    previsao = modelo.predict(entrada)[0]
+
+    if previsao == 1:
+        st.success(f"Boas chances de ter sobrevivido ({probabilidade:.0%})")
+    else:
+        st.error(f"Provavelmente morreria ({probabilidade:.0%})")
+
+    st.progress(probabilidade)
