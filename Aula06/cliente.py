@@ -20,3 +20,9 @@ try:
     modelo, colunas = carregar_modelo()
 except FileNotFoundError:
     st.error("Arquivo não encontrado.")
+
+st.subheader("Dados do Passageiro")
+col1, col2 = st.columns(2)
+
+with col1:
+    classe = st.selectbox("Classe de Passagem: ", options=[1,2,3], index=2, format_func=lambda x: f"{x}a. Classe")
