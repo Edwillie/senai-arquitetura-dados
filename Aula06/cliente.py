@@ -1,10 +1,13 @@
 import joblib
 import pandas as pd
 import streamlit as st
+from pathlib import Path
 
-MODELO_ARQUIVO = "modelo_titanic.joblib"
+BASE_DIR = Path(__file__).resolve().parent
 
-@st.cache_reource
+MODELO_ARQUIVO = BASE_DIR / "modelo_titanic.joblib"
+
+@st.cache_resource
 def carregar_modelo():
     pacote = joblib.load(MODELO_ARQUIVO)
     return pacote["modelo"], pacote["colunas"]
