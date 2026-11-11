@@ -1,0 +1,13 @@
+origem,destino,peso
+Av. Independência,Rua Barão da Pedra Negra,4
+Av. Independência,Av. do Povo,6
+Rua Barão da Pedra Negra,Praça Santa Terezinha,2
+Av. do Povo,Praça Santa Terezinha,3
+Praça Santa Terezinha,Rua XV de Novembro,2
+Rua XV de Novembro,Rua Quatro de Março,4
+Rua Quatro de Março,Av. Itália,5
+Av. Itália,Av. Dom Pedro I,3
+Av. Dom Pedro I,Rod. Floriano Peixoto,7
+Av. do Povo,Av. Dom Pedro I,6
+Rua Barão da Pedra Negra,Rua Quatro de Março,8
+Rua XV de Novembro,Rod. Floriano Peixoto,10
