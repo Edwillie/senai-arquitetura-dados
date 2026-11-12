@@ -20,11 +20,19 @@ destino = input("Digite o vertice de destino: ").strip().upper()
 arestas = list(nx.dfs_edges(G, source=origem))
 visitados = [origem] + [v for u,v in arestas]
 
+melhor = min(nx.all_simple_paths(G, origem, destino), key=lambda p: nx.path_weight(G, p, weight="peso"))
+custo = nx.path_weight(G, melhor, weight="peso")
+
+print("Melhor Caminho:")
+print("-> ".join(melhor))
+print("Menor Custo: ", custo)
+
+caminho_minimo = list(zip(melhor[:-1], melhor[1:]))
 print("Visitados: ", visitados)
 
 pos = nx.spring_layout(G)
 nx.draw(G, pos, with_labels=True, node_color="purple", node_size=500, arrows=True)
-nx.draw_networkx_edges(G, pos, edgelist=arestas, edge_color="red", width=3)
+nx.draw_networkx_edges(G, pos, edgelist=caminho_minimo, edge_color="red", width=3)
 
 edge_labels = nx.get_edge_attributes(G, "peso")
 nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels)
